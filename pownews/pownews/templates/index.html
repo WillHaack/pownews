@@ -1,1 +1,52 @@
-Hello World 2!
+{% extends "header.html" %}
+{% load staticfiles %}
+{% block content %}
+<div class="center">
+<h1> news brought to you by the strongest collection of computers </h1>
+<p> send a small donation to <b>1Aaykbf4iJ8d4UTh2LCjNGZyicqkFresdp</b> to support the project </p>
+<table class="table table-striped">
+  <tr>
+    <td>
+        link
+    </td>
+    <td>
+      nonce
+    </td>
+    <td>
+      hash
+    </td>
+    <td>
+      vote
+    </td>
+  </tr>
+  <tr>
+      <td>
+        <a href="www.pushforpizza.com">www.pushforpizza.com</a>
+      </td>
+      <td>
+        29940349034
+      </td>
+      <td>
+        000049034904390
+      </td>
+      <td>
+        <button class="btn btn-primary">contribute</button>
+      </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="www.google.com">www.google.com</a>
+    </td>
+    <td>
+      203904904390
+    </td>
+    <td>
+      00049049030
+    </td>
+    <td>
+      <button class="btn btn-primary">contribute</button>
+    </td>
+  </tr>
+</table>
+</div>
+{% endblock %}
