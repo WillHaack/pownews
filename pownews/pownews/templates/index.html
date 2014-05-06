@@ -19,34 +19,14 @@
       vote
     </td>
   </tr>
+  {% for link in links %}
   <tr>
-      <td>
-        <a href="www.pushforpizza.com">www.pushforpizza.com</a>
-      </td>
-      <td>
-        29940349034
-      </td>
-      <td>
-        000049034904390
-      </td>
-      <td>
-        <button class="btn btn-primary">contribute</button>
-      </td>
+      <td>{{link.link}}</td>
+      <td>{{link.nonce}}</td>
+      <td>{{link.hash}}</td>
+      <td><button class="btn btn-primary">contribute</button></td>
   </tr>
-  <tr>
-    <td>
-      <a href="www.google.com">www.google.com</a>
-    </td>
-    <td>
-      203904904390
-    </td>
-    <td>
-      00049049030
-    </td>
-    <td>
-      <button class="btn btn-primary">contribute</button>
-    </td>
-  </tr>
+  {% endfor %}
 </table>
 </div>
 {% endblock %}
