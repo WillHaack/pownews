@@ -9,10 +9,13 @@
 <form method="post" action="/pownews/addLink">
   <label for="link">link/text:</label>
   <input id="link" name="link" type="text" placHolder="type a link"></input>
-  <label for="link">nonce:</label>
+  <label for="nonce">nonce:</label>
   <input id="nonce" name="nonce" type="text" value="0"></input>
   <button type="submit" class="btn btn-success">submit</button>
 </form>
+<script>
+document.getElementById('link').focus()
+</script>
 <br>
 <table class="table table-striped">
   <tr>
@@ -28,7 +31,7 @@
   </tr>
   {% for link in links %}
   <tr>
-      <td>{{link.link}}</td>
+      <td><a href="http://{{link.link}}">{{link.link}}</td>
       <td>{{link.nonce}}</td>
       <td>{{link.hash}}</td>
   </tr>
