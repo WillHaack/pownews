@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response, redirect
 from django.http import HttpResponse
 from pownews.models import *
 from django.template import RequestContext
@@ -35,4 +35,4 @@ def addLink(request):
       entry.nonce = nonce
       entry.hashed = hashed
   entry.save()
-  return HttpResponse('success')
+  return redirect('/')

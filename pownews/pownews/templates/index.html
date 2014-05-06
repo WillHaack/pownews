@@ -6,16 +6,18 @@
 <p> send a small donation to <b>1Aaykbf4iJ8d4UTh2LCjNGZyicqkFresdp</b> to support the project </p>
 <br>
 <p> submit a new link </p>
-<form method="post" action="/addLink">
-  <input id="nonce" type="hidden" value="0"></input>
-  <input id="link" type="text" placholder="type a link"></input>
+<form method="post" action="/pownews/addLink">
+  <label for="link">link/text:</label>
+  <input id="link" name="link" type="text" placHolder="type a link"></input>
+  <label for="link">nonce:</label>
+  <input id="nonce" name="nonce" type="text" value="0"></input>
   <button type="submit" class="btn btn-success">submit</button>
 </form>
 <br>
 <table class="table table-striped">
   <tr>
     <td>
-      <b>link</b>
+      <b>link/text</b>
     </td>
     <td>
       <b>nonce</b>
@@ -23,16 +25,12 @@
     <td>
       <b>hash</b>
     </td>
-    <td>
-      <b>vote</b>
-    </td>
   </tr>
   {% for link in links %}
   <tr>
       <td>{{link.link}}</td>
       <td>{{link.nonce}}</td>
       <td>{{link.hash}}</td>
-      <td><button class="btn btn-primary">contribute</button></td>
   </tr>
   {% endfor %}
 </table>
