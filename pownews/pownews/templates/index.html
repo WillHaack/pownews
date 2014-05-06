@@ -4,19 +4,27 @@
 <div class="center">
 <h1> news brought to you by the strongest collection of computers </h1>
 <p> send a small donation to <b>1Aaykbf4iJ8d4UTh2LCjNGZyicqkFresdp</b> to support the project </p>
+<br>
+<p> submit a new link </p>
+<form method="post" action="/addLink">
+  <input id="nonce" type="hidden" value="0"></input>
+  <input id="link" type="text" placholder="type a link"></input>
+  <button type="submit" class="btn btn-success">submit</button>
+</form>
+<br>
 <table class="table table-striped">
   <tr>
     <td>
-        link
+      <b>link</b>
     </td>
     <td>
-      nonce
+      <b>nonce</b>
     </td>
     <td>
-      hash
+      <b>hash</b>
     </td>
     <td>
-      vote
+      <b>vote</b>
     </td>
   </tr>
   {% for link in links %}
